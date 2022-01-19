@@ -1,7 +1,5 @@
 import { ApolloServer } from "apollo-server";
 
-import chalk from "chalk";
-
 import { schema } from "./schema";
 
 export const server = new ApolloServer({
@@ -9,8 +7,7 @@ export const server = new ApolloServer({
 });
 
 const port = 3000;
-
-server.listen({ port }).then((data) => {
-  console.log(data);
-  console.log(chalk.green(`🚀 Server ready at ${data.url}`));
+const log = console.log;
+server.listen({ port }).then(({ url }) => {
+  log(`🚀 Server ready at this url ${url}`);
 });
