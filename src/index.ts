@@ -6,7 +6,7 @@ import { schema } from "./schema";
 
 export const server = new ApolloServer({
   schema,
-  plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
+  // plugins: [ApolloServerPluginLandingPageGraphQLPlayground()],
 });
 
 const port = 3000;
